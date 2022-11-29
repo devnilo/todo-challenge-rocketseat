@@ -1,0 +1,42 @@
+.tasks {
+    width: 100%;
+    max-width: 46rem;
+    margin: 0 auto;
+    margin-top: 5.625rem;
+    padding: 0 1rem;
+}
+
+.tasksCheck {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.tasksCheck div {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.tasksCheck p {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.tasksCheck p.createdTasks {
+    color: var(--blue);
+}
+
+.tasksCheck p.doneTasks {
+    color: var(--purple);
+}
+
+.tasksCheck span {
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
