@@ -20,7 +20,7 @@ export function NewTask({ task, onDelete, onComplete }: Props) {
                 onClick={() => onComplete(task.id)}> {task.isCompleted ? <img src={checkBox} /> : <div />}
             </button>
 
-            <p>{task.title}</p>
+            <p className={task.isCompleted ? styles.textCompleted : ""} >{task.title}</p>
 
             <button className={styles.deleteTask} onClick={() => onDelete(task.id)}>
                 <Trash size={24} />

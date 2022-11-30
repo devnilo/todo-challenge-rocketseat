@@ -1,6 +1,8 @@
 import { TaskProps } from '../../App';
 import { NewTask } from '../NewTask/NewTask';
 
+import clipboard from '../../assets/clipboard.png'
+
 import styles from './Tasks.module.css';
 
 interface Props {
@@ -36,6 +38,16 @@ export function Tasks({ tasks, onDelete, onComplete }: Props) {
                         onDelete={onDelete}
                         onComplete={onComplete} />
                 ))}
+
+                {tasks.length <= 0 && (
+                    <section className={styles.emptyTasks}>
+                        <img src={clipboard} />
+                        <div>
+                            <p>Você ainda não tem tarefas cadastradas</p>
+                            <span>Crie tarefas e organize seus itens a fazer</span>
+                        </div>
+                    </section>
+                )}
             </div>
 
         </section>
